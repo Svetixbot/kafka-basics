@@ -31,7 +31,7 @@ nodes of kafka
 ## Producers
 
 ### Writing
-- need to provide a name of a topic and 1 broker-id will connect to the whole cluster
+- need to provide a name of a topic and 1 broker-id, it will connect a producer/consumer to the whole cluster
 - partition is randomly assigned, unless key is provided.
 
 ### Acknowlidgment
@@ -51,13 +51,18 @@ Adding partitions after writing to a topic will break the order.
 ```
  
 ## Delivery semantics for consumers:
- - At most once
+### At most once
+ 
 commit offset immidiatly after receiving a message
 potential loss of data  
- - At least once (`common practice`)
+
+### At least once (`common practice`)
+ 
 commit offiset after the message has been processed
 a chance of recieving duplicated messages, consumer has to be idempotent
- - Exactly once
+
+### Exactly once
+ 
 out of reach. do not attempt.
  
  ===
