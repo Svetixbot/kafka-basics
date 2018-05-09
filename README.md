@@ -78,3 +78,5 @@ out of reach. do not attempt.
  - constant amount of partitions
  - key for a message
   
+### Understanding of optimal number of partitions
+### Understanding of comsumers group
